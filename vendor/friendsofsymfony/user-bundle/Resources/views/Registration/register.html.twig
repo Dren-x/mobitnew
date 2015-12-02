@@ -1,0 +1,15 @@
+{% extends "FOSUserBundle::layout.html.twig" %}
+
+{% block fos_user_content %}
+    <div>
+{% include "FOSUserBundle:Registration:register_content.html.twig" %}
+    </div>
+    <p>
+    <li><a href="{{ path('BlogBlogBundle_homepage') }}">Вернуться на главную</a></li>
+    </p>
+
+
+
+
+{% endblock fos_user_content %}
+
