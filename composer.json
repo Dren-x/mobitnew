@@ -22,7 +22,8 @@
         "doctrine/doctrine-fixtures-bundle": "dev-master",
         "doctrine/data-fixtures" : "dev-master",
         "doctrine/doctrine-migrations-bundle": "^1.0",
-        "twbs/bootstrap": "^3.3"
+        "twbs/bootstrap": "^3.3",
+        "sp/bower-bundle": "^0.11.0"
 
     },
     "require-dev": {

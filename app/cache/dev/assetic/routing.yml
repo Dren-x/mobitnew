@@ -2,4 +2,4 @@ _assetic:
     resource: .
     type: assetic
 _app:
-    resource: 'C:\OpenServer\domains\Mobit\app/config/routing_dev.yml'
+    resource: 'C:\OpenServer\domains\Mobitnew\app/config/routing_dev.yml'

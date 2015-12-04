@@ -16,6 +16,7 @@ return array(
     'Symfony\\Bridge\\ProxyManager\\' => array($vendorDir . '/symfony/symfony/src/Symfony/Bridge/ProxyManager'),
     'Symfony\\Bridge\\Monolog\\' => array($vendorDir . '/symfony/symfony/src/Symfony/Bridge/Monolog'),
     'Symfony\\Bridge\\Doctrine\\' => array($vendorDir . '/symfony/symfony/src/Symfony/Bridge/Doctrine'),
+    'Sp\\BowerBundle\\' => array($vendorDir . '/sp/bower-bundle'),
     'Sensio\\Bundle\\FrameworkExtraBundle\\' => array($vendorDir . '/sensio/framework-extra-bundle'),
     'Monolog\\' => array($vendorDir . '/monolog/monolog/src/Monolog'),
     'Incenteev\\ParameterHandler\\' => array($vendorDir . '/incenteev/composer-parameter-handler'),

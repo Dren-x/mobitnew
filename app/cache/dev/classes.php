@@ -6968,7 +6968,10 @@ $class = $this->getAliasNamespace($namespaceAlias) .'\\'. $simpleClassName;
 }
 $proxyClass = new \ReflectionClass($class);
 if ($proxyClass->implementsInterface($this->proxyInterfaceName)) {
-$class = $proxyClass->getParentClass()->getName();
+if (! $parentClass = $proxyClass->getParentClass()) {
+return null;
+}
+$class = $parentClass->getName();
 }
 foreach ($this->managers as $id) {
 $manager = $this->getService($id);
