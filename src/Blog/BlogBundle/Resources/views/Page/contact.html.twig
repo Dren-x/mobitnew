@@ -1,10 +1,10 @@
 {% extends 'BlogBlogBundle::layout.html.twig' %}
-
+{% form_theme form 'bootstrap_3_layout.html.twig' %}
 {% block title %}Обратная связь{% endblock%}
 
 {% block body %}
     <header>
-        <h1>Заполните форму:</h1></br>
+
 
     </header>
 
@@ -13,21 +13,24 @@
                 {{ flashMessage }}
             </div>
         {% endfor %}
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <p>Возникли вопросы?</br> Мы незамедлительно на них ответим!</p>
+            <form action="{{ path('BlogBlogBundle_contact') }}" method="post" {{ form_enctype(form) }} class="blog">
+             {{ form_errors(form) }}
 
-    <form action="{{ path('BlogBlogBundle_contact') }}" method="post" {{ form_enctype(form) }} class="blog">
+                {{ form_row(form.name) }}
+                {{ form_row(form.email) }}
+                {{ form_row(form.subject) }}
+                {{ form_row(form.body) }}
 
-   {{ form_errors(form) }}
-
-        {{ form_row(form.name) }}
-        {{ form_row(form.email) }}
-        {{ form_row(form.subject) }}
-        {{ form_row(form.body) }}
-
-        {{ form_rest(form) }}
-
-        <input type="submit" value="Отправить" />
-
-
+                {{ form_rest(form) }}
+                <input type="submit" value="Отправить" />
+            </form>
+        </div>
+        <div class="col-md-3"></div>
+    </div>
 
 
 {% endblock %}
