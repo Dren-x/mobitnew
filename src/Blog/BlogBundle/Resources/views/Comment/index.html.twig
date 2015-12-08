@@ -3,9 +3,16 @@
     <article class="comment {{ cycle(['odd', 'even'], loop.index0) }}" id="comment-{{ comment.id }}">
 
         <header>
-            <p><span class="highlight">{{ comment.user }}</span> оставил запись <time datetime="{{ comment.created|date('c') }}">{{ comment.created|date('l, F j, Y') }}</time></p>
+            <div class="row">
+                <div class="col-md-12" style="background: #ecf0f0">
+                    <p><span class="highlight">{{ comment.user }}</span> оставил запись  <time datetime="{{ comment.created|date('c') }}">{{ comment.created|date('d. m. Y') }}</time></p>
+                </div>
+
+            </div>
         </header>
+        <blockquote>
         <p>{{ comment.comment }}</p>
+        </blockquote>
     </article>
 {% else %}
     <p>Комментариев к этой записи нет. Твой будет первым!</p>
