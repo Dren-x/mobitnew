@@ -1,0 +1,10 @@
+{% extends 'BlogBlogBundle::layout.html.twig' %}
+{% form_theme form 'bootstrap_3_layout.html.twig' %}
+{% block title %}Регистрация{% endblock%}
+{% block body %}
+    <div class="row">
+        <div class="col-md-4" style="background: #0f7864">
+            {{ render(controller( 'FOSUserBundle:Registration:register')) }}
+        </div>
+    </div>
+{% endblock %}

@@ -63,6 +63,8 @@
                     <li><a href="{{ path('BlogBlogBundle_register') }}">Регистрация</a></li>
                     <li><a href="{{ path('BlogBlogBundle_login') }}">Вход</a></li>
                 </ul>
+                {{ render(controller( 'FOSUserBundle:Security:login')) }}
+
             </div>
             <!-- /.navbar-collapse -->
         </div>
@@ -98,7 +100,7 @@
                         <h1>MobiTehn</h1>
                         <hr class="small">
                         <span class="subheading">Gadgets - it's part of us...</span>
-                    </div>
+                       </div>
                 </div>
             </div>
         </div>
@@ -117,9 +119,10 @@
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="js/bootstrap.min.js"></script>
 
+
 <div class="row">
-    <div class="col-md-8 col-md-offset-1" >{% block body %}{% endblock %}</div>
-    <div class="col-md-2">{{ render(controller( 'FOSUserBundle:Security:login')) }}</div>
+    <div class="col-md-8 col-md-offset-2" >{% block body %}{% endblock %}</div>
+    </div>
 </div>
 
 <hr>

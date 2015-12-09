@@ -7,22 +7,25 @@
     <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
 {% endif %}
 
-<form action="{{ path("fos_user_security_check") }}" method="post">
-
+<form action="{{ path("fos_user_security_check") }}" method="post" class="navbar-form navbar-left">
+<div class="form-group">
     <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
 
-    <label for="username">Логин</label>
-    <input type="text" id="username" name="_username" value="{{ last_username }}" required="required" />
 
-    <label for="password">Пароль</label>
-    <input type="password" id="password" name="_password" required="required" />
+    <input type="text" class="form-control" id="username" placeholder="Логин" name="_username" value="{{ last_username }}" required="required" />
+
+
+    <input type="password" class="form-control" id="password" placeholder="Пароль" name="_password" required="required" />
 
     <input type="checkbox" id="remember_me" name="_remember_me" value="on" />
     <label for="remember_me">Запомнить</label>
 
-    <input type="submit" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans }}" />
+<button
+     type="submit" class="btn btn-default" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans }}" />
+    <i class="fa fa-sign-in"></i> ВОЙТИ
+</button>
+</div>
 </form>
 
-    <p><li><a href="{{ path('BlogBlogBundle_register') }}">Регистрация</a></li></p>
 
 {% endblock fos_user_content %}
