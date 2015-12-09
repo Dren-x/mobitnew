@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru" xmlns="http://www.w3.org/1999/html">
 <head>
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -55,7 +56,7 @@
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
+               <ul class="nav navbar-nav navbar-right">
                     <li><a href="{{ path('BlogBlogBundle_homepage') }}">Главная</a></li>
                     <li><a href="{{ path('BlogBlogBundle_about') }}">О нас</a></li>
                     <li><a href="{{ path('BlogBlogBundle_contact') }}">Контакты</a></li>
@@ -117,16 +118,36 @@
 <script src="js/bootstrap.min.js"></script>
 
 <div class="row">
-    <div class="col-md-2"></div>
-    <div class="col-md-8">{% block body %}{% endblock %}</div>
-    <div class="col-md-2"></div>
+    <div class="col-md-8 col-md-offset-1" >{% block body %}{% endblock %}</div>
+    <div class="col-md-2">{{ render(controller( 'FOSUserBundle:Security:login')) }}</div>
 </div>
 
-<div id="footer">
+<hr>
+
     {% block footer %}
+        <div id="footer">
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <ul class="list-inline text-center">
+                        <li>
+                            <a href="https://github.com/Dren-x/mobitnew">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <p class="copyright text-muted"> &copy; MobiTech 2015</p>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     {% endblock %}
-</div>
+
 {% block javascripts %}{% endblock %}
 </body>
 </html>

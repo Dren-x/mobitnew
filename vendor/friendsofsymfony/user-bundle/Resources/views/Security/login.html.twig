@@ -11,19 +11,18 @@
 
     <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
 
-    <label for="username">{{ 'security.login.username'|trans }}</label>
+    <label for="username">Логин</label>
     <input type="text" id="username" name="_username" value="{{ last_username }}" required="required" />
 
-    <label for="password">{{ 'security.login.password'|trans }}</label>
+    <label for="password">Пароль</label>
     <input type="password" id="password" name="_password" required="required" />
 
     <input type="checkbox" id="remember_me" name="_remember_me" value="on" />
-    <label for="remember_me">{{ 'security.login.remember_me'|trans }}</label>
+    <label for="remember_me">Запомнить</label>
 
     <input type="submit" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans }}" />
 </form>
-    </form>
-    <p>
-    <li><a href="{{ path('BlogBlogBundle_homepage') }}">Вернуться на главную</a></li>
-    </p>
+
+    <p><li><a href="{{ path('BlogBlogBundle_register') }}">Регистрация</a></li></p>
+
 {% endblock fos_user_content %}

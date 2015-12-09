@@ -15,9 +15,8 @@
             </div>
 
             <footer class="meta">
-               <!-- <p>Comments: - </p> -->
-                <p>Автор: <span class="highlight">{{ blog.author }}</span> at {{ blog.created|date('h:iA') }}</p>
-                <p>Тэги: <span class="highlight">{{ blog.tags }}</span></p>
+                <p class="post-meta" >Автор: <span class="highlight">{{ blog.author }}</span> at {{ blog.created|date('h:iA') }}</p>
+                <p class="post-meta" >Тэги: <span class="highlight">{{ blog.tags }}</span></p>
             </footer>
         </article>
     {% else %}
