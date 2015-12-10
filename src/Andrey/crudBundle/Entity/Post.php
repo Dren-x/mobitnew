@@ -83,6 +83,7 @@ class Post
      */
     public function getBody()
     {
+
         return $this->body;
     }
 

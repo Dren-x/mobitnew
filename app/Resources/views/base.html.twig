@@ -50,18 +50,19 @@
                     <span class="icon-bar"></span>
                 </button>
 
-                <a class="navbar-brand" href="{{ path('BlogBlogBundle_createnews') }}">Добавить новость</a>
+                {#<a class="navbar-brand" href="{{ path('BlogBlogBundle_createnews') }}">Добавить новость</a>#}
 
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="{{ path('BlogBlogBundle_createnews') }}">Добавить новость</a></li>
                     <li><a href="{{ path('BlogBlogBundle_homepage') }}">Главная</a></li>
                     <li><a href="{{ path('BlogBlogBundle_about') }}">О нас</a></li>
                     <li><a href="{{ path('BlogBlogBundle_contact') }}">Контакты</a></li>
                     <li><a href="{{ path('BlogBlogBundle_register') }}">Регистрация</a></li>
-                    <li><a href="{{ path('BlogBlogBundle_login') }}">Вход</a></li>
+                    {#<li><a href="{{ path('BlogBlogBundle_login') }}">Вход</a></li>#}
                 </ul>
                 {{ render(controller( 'FOSUserBundle:Security:login')) }}
 
