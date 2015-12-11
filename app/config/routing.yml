@@ -1,6 +1,6 @@
-andreycrud:
-    resource: "@AndreycrudBundle/Resources/config/routing.yml"
-    prefix:   /
+#andreycrud:
+    #resource: "@AndreycrudBundle/Resources/config/routing.yml"
+   # prefix:   /
 
 blog_blog:
     resource: "@BlogBlogBundle/Resources/config/routing.yml"

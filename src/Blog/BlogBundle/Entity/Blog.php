@@ -2,7 +2,11 @@
 namespace Blog\BlogBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\ArrayCollection as ArrayCollection;
+use Doctrine\ORM\Events;
+use Doctrine\Common\EventSubscriber;
+use Doctrine\Common\Persistence\Event\LifecycleEventArgs;
+use Doctrine\ORM\Mapping\HasLifecycleCallBacks;
 
 /**
  * @ORM\Entity(repositoryClass="Blog\BlogBundle\Entity\Repository\BlogRepository")
