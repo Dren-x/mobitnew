@@ -25,6 +25,7 @@ class BlogController extends Controller
 
         $entities = $em->getRepository('BlogBlogBundle:Blog')->findAll();
 
+
         return $this->render('BlogBlogBundle:Blog:index.html.twig', array(
             'entities' => $entities,
         ));
@@ -96,6 +97,7 @@ class BlogController extends Controller
         $em = $this->getDoctrine()->getManager();
 
         $entity = $em->getRepository('BlogBlogBundle:Blog')->find($id);
+        
 
         if (!$entity) {
             throw $this->createNotFoundException('Unable to find Blog entity.');

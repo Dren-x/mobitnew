@@ -1,7 +1,11 @@
 {% extends '::base.html.twig' %}
-
-{% block body -%}
-    <h1>Blog edit</h1>
+{% form_theme edit_form 'bootstrap_3_layout.html.twig' %}
+{% block body %}
+    <body>
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+    <h1>Редактирование новости</h1>
+            </br>
 
     {{ form(edit_form) }}
 
@@ -13,4 +17,7 @@
     </li>
     <li>{{ form(delete_form) }}</li>
 </ul>
+        </div>
+    </div>
+    </body>
 {% endblock %}

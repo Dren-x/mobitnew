@@ -11,3 +11,6 @@ blog_blog:
     #type:     annotation
 fos_user:
     resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+blog_blog_blog:
+    resource: "@BlogBlogBundle/Resources/config/routing/blog.yml"
+    prefix:   /blog
