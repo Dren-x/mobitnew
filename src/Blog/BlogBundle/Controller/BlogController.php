@@ -97,17 +97,20 @@ class BlogController extends Controller
         $em = $this->getDoctrine()->getManager();
 
         $entity = $em->getRepository('BlogBlogBundle:Blog')->find($id);
-        
+
 
         if (!$entity) {
             throw $this->createNotFoundException('Unable to find Blog entity.');
         }
 
         $deleteForm = $this->createDeleteForm($id);
+        $comments = $em->getRepository('BlogBlogBundle:Comment')
+            ->getCommentsForBlog($entity->getId());
 
         return $this->render('BlogBlogBundle:Blog:show.html.twig', array(
             'entity'      => $entity,
             'delete_form' => $deleteForm->createView(),
+            'comments'  => $comments
         ));
     }
 
@@ -191,7 +194,6 @@ class BlogController extends Controller
     {
         $form = $this->createDeleteForm($id);
         $form->handleRequest($request);
-
         if ($form->isValid()) {
             $em = $this->getDoctrine()->getManager();
             $entity = $em->getRepository('BlogBlogBundle:Blog')->find($id);
@@ -219,7 +221,7 @@ class BlogController extends Controller
         return $this->createFormBuilder()
             ->setAction($this->generateUrl('blog_delete', array('id' => $id)))
             ->setMethod('DELETE')
-            ->add('submit', 'submit', array('label' => 'Delete'))
+            ->add('submit', 'submit', array('label' => 'Удалить'))
             ->getForm()
         ;
     }

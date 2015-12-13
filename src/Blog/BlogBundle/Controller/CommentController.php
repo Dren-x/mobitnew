@@ -10,12 +10,12 @@ use Blog\BlogBundle\Form\CommentType;
 */
 class CommentController extends Controller
 {
-public function newAction($blog_id)
+public function newAction($entity_id)
 {
-$blog = $this->getBlog($blog_id);
+$entity = $this->getBlog($entity_id);
 
 $comment = new Comment();
-$comment->setBlog($blog);
+$comment->setBlog($entity);
 $form   = $this->createForm(new CommentType(), $comment);
 
 return $this->render('BlogBlogBundle:Comment:form.html.twig', array(
@@ -26,10 +26,10 @@ return $this->render('BlogBlogBundle:Comment:form.html.twig', array(
 
 public function createAction($blog_id)
 {
-$blog = $this->getBlog($blog_id);
+$entity = $this->getBlog($blog_id);
 
 $comment  = new Comment();
-$comment->setBlog($blog);
+$comment->setBlog($entity);
 $request = $this->getRequest();
 $form    = $this->createForm(new CommentType(), $comment);
 $form->bind($request);
@@ -57,13 +57,13 @@ protected function getBlog($blog_id)
 $em = $this->getDoctrine()
 ->getManager();
 
-$blog = $em->getRepository('BlogBlogBundle:Blog')->find($blog_id);
+$entity = $em->getRepository('BlogBlogBundle:Blog')->find($blog_id);
 
-if (!$blog) {
+if (!$entity) {
 throw $this->createNotFoundException('Unable to find Blog post.');
 }
 
-return $blog;
+return $entity;
 }
 
 }

@@ -52,3 +52,12 @@ e8d7ff,127.0.0.1,GET,http://symfony/symfony_demo/web/app_dev.php/ru/admin/post/2
 63022a,127.0.0.1,GET,http://symfony/symfony_demo/web/app_dev.php/ru/logout,1448042507,,302
 d67b5e,127.0.0.1,GET,http://symfony/symfony_demo/web/app_dev.php/ru,1448042507,,200
 7c9143,127.0.0.1,GET,http://symfony/symfony_demo/web/app_dev.php/ru,1448055439,,200
+f3d98d,127.0.0.1,GET,http://mobitnew/symfony_demo/web/app_dev.php/,1450011579,,302
+a13343,127.0.0.1,GET,http://mobitnew/symfony_demo/web/app_dev.php/ru,1450011580,,200
+773ee8,127.0.0.1,GET,http://mobitnew/symfony_demo/web/app_dev.php/ru/blog/,1450011583,,200
+7d02c3,127.0.0.1,GET,http://mobitnew/symfony_demo/web/app_dev.php/ru/blog/posts/in-hac-habitasse-platea-dictumst,1450011586,,200
+738dcb,127.0.0.1,GET,http://mobitnew/symfony_demo/web/app_dev.php/ru/admin/post/,1450011605,,302
+cbbf97,127.0.0.1,GET,http://mobitnew/symfony_demo/web/app_dev.php/ru/login,1450011605,,200
+ca8247,127.0.0.1,POST,http://mobitnew/symfony_demo/web/app_dev.php/ru/login_check,1450011608,,302
+9fc328,127.0.0.1,GET,http://mobitnew/symfony_demo/web/app_dev.php/ru/admin/post/,1450011609,,200
+aaaa53,127.0.0.1,GET,http://mobitnew/symfony_demo/web/app_dev.php/ru/admin/post/1/edit,1450011613,,200

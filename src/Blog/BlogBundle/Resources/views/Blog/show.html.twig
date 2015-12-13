@@ -18,19 +18,21 @@
         </p>
         <small>
             <tr>
-                <b><th>Тэги: </th></b>
+                <th>Тэги: </th>
                 <td>{{ entity.tags }}</td>
             </tr>
 
             </br>
+
+
             <tr>
-               <b><th>Опубликовано: </th></b>
-                <td>{{ entity.created|date('d-m-Y') }}</td>
+                <th>Автор: </th>
+                <td>{{ entity.author }}</td>
             </tr>
             </br>
             <tr>
-               <b> <th>Автор: </th></b>
-                <td>{{ entity.author }}</td>
+                <th>Опубликовано: </th>
+                <td>{{ entity.created|date('d.m.y') }} в {{ entity.created|date('H:i') }}</td>
             </tr>
             </br>
             </br>
@@ -42,19 +44,34 @@
                     Back to the list
                 </a>
             </li>#}
-            <div class="col-md-2">
-                <a href="{{ path('blog_edit', { 'id': entity.id }) }}">
+<div>
+                <div class="pull-left">
+                <a href="{{ path('blog_edit', { 'id': entity.id }) }}" class="btn btn-default">
                     Редактировать
                 </a>
+                </div>
 
+
+                <div class="pull-right">
+                {{ form(delete_form) }}
                 </div>
-            <div class="col-md-2 col-md-offset-1">
-            <a>{{ form(delete_form) }}</a>
-                </div>
+    </br>
+    </br>
+    </br>
+</div>
+
         </ul>
     </div>
 </div>
+<section class="comments" id="comments">
+    <section class="previous-comments">
+        <h3>Комментарии</h3>
+        {% include 'BlogBlogBundle:Comment:index.html.twig' with { 'comments': comments } %}
+    </section>
+    <h3>Добавить комментарий</h3>
 
+    {{ render(controller( 'BlogBlogBundle:Comment:new', { 'entity_id': entity.id } )) }}
+</section>
 
 
 

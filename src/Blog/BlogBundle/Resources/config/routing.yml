@@ -40,8 +40,5 @@ BlogBlogBundle_createnews:
     defaults: { _controller: BlogBlogBundle:Blog:new}
     requirements:
         methods:  POST
-blog_create:
-    path:     /create
-    defaults: { _controller: BlogBlogBundle:Blog:create }
-    requirements:
-        methods:  POST
+
+
