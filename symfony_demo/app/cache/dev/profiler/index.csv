@@ -61,3 +61,4 @@ cbbf97,127.0.0.1,GET,http://mobitnew/symfony_demo/web/app_dev.php/ru/login,14500
 ca8247,127.0.0.1,POST,http://mobitnew/symfony_demo/web/app_dev.php/ru/login_check,1450011608,,302
 9fc328,127.0.0.1,GET,http://mobitnew/symfony_demo/web/app_dev.php/ru/admin/post/,1450011609,,200
 aaaa53,127.0.0.1,GET,http://mobitnew/symfony_demo/web/app_dev.php/ru/admin/post/1/edit,1450011613,,200
+4b75fb,127.0.0.1,GET,http://mobitnew/symfony_demo/web/app_dev.php/ru,1450201382,,200
